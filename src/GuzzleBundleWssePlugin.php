@@ -17,7 +17,7 @@ class GuzzleBundleWssePlugin extends Bundle implements PluginInterface
      * @param array $configs
      * @param ContainerBuilder $container
      */
-    public function load(array $configs, ContainerBuilder $container)
+    public function load(array $configs, ContainerBuilder $container) : void
     {
         $extension = new GuzzleWsseExtension();
         $extension->load($configs, $container);
@@ -29,7 +29,7 @@ class GuzzleBundleWssePlugin extends Bundle implements PluginInterface
      * @param string $clientName
      * @param Definition $handler
      */
-    public function loadForClient(array $config, ContainerBuilder $container, string $clientName, Definition $handler)
+    public function loadForClient(array $config, ContainerBuilder $container, string $clientName, Definition $handler) : void
     {
         if ($config['username'] && $config['password']) {
             $wsse = new Definition('%guzzle_bundle_wsse_plugin.middleware.wsse.class%');
@@ -49,7 +49,7 @@ class GuzzleBundleWssePlugin extends Bundle implements PluginInterface
     /**
      * @param ArrayNodeDefinition $pluginNode
      */
-    public function addConfiguration(ArrayNodeDefinition $pluginNode)
+    public function addConfiguration(ArrayNodeDefinition $pluginNode) : void
     {
         $pluginNode
             ->addDefaultsIfNotSet()
