@@ -2,7 +2,7 @@
 
 namespace Gregurco\Bundle\GuzzleBundleWssePlugin\Test;
 
-use EightPoints\Bundle\GuzzleBundle\EightPointsGuzzleBundlePlugin;
+use EightPoints\Bundle\GuzzleBundle\PluginInterface;
 use Gregurco\Bundle\GuzzleBundleWssePlugin\GuzzleBundleWssePlugin;
 use Gregurco\Bundle\GuzzleBundleWssePlugin\Middleware\WsseAuthMiddleware;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
@@ -26,7 +26,7 @@ class GuzzleBundleWssePluginTest extends TestCase
 
     public function testSubClassesOfPlugin()
     {
-        $this->assertInstanceOf(EightPointsGuzzleBundlePlugin::class, $this->plugin);
+        $this->assertInstanceOf(PluginInterface::class, $this->plugin);
         $this->assertInstanceOf(Bundle::class, $this->plugin);
     }
 
