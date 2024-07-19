@@ -1,5 +1,5 @@
 {
-    "name":        "matteorossi-thespacesm/guzzle-bundle-wsse-plugin",
+    "name":        "thespacersm/guzzle-bundle-wsse-plugin",
     "type":        "library",
     "description": "WSSE Plugin for Guzzle Bundle, a PHP HTTP client library and framework for building RESTful web service clients",
     "keywords":    ["wsse", "middleware", "plugin", "framework", "http", "rest", "web service", "curl", "client", "HTTP client"],
